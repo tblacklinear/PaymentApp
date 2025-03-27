@@ -69,4 +69,4 @@ Our Git integrations speed up communication between developers and the rest of y
 If you set up the Slack integration for team or project notifications, it'll send an update to the selected channel. If you've connected one of our customer support integrations, conversations with affected users will be re-opened automatically upon PR merge so that you can let them know a feature shipped or bug was fixed.
 
 Change Log 1.3
-Final
+Final 127
