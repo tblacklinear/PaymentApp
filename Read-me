@@ -1,0 +1,72 @@
+Version 1.4
+
+hello-linear
+Showing off GH/Linear integration
+
+See full guide here: https://linear.app/docs/github
+
+Overview
+The GitHub and GitLab integrations move issues from In Progress to Done automatically so you never have to update issues manually. It takes less than a minute to connect GitHub to the workspace and then go to team settings to configure the automatic updates.
+
+Link Linear issues to GitHub pull requests. Automate your PR workflow so that issues update when PRs are drafted, opened, merged, and when reviews are requested. You can link single or multiple issues to a specific PR. The integration also auto links Linear issue IDs in GitHub conversations. If you're having issues with the integration, see debugging suggestions for common problems in the FAQ.
+
+Configure and Connect GH with Linear
+Go to Settings in Linear to enable the GitHub integration Authenticate GitHub and choose what statuses to apply when PRs are created, request review, and merged.
+
+To enable GitHub, click Connect Linear with GitHub Pull Requests in integration settings and select which repositories you want to give Linear access to
+
+All teams in your workspace will be able to link to issues in the selected repositories
+
+Enable Commit Linking
+You can also connect Linear with Github Commits. Linking commits to Linear issues is an additional workflow from Pull Requests. Using commit linking you can link and close Linear issues directly from your commit messages.
+
+Connect Multiple GitHub organizations
+Once you've connected one GitHub organization, go back to the integration settings page Select the three dot menu in the Connect Linear with GitHub pull requests section (which should show Enabled) and choose the Connect new organization option
+
+This will take you through the same flow as when you connected the first organization. Currently, we support multiple organizations for the PR automation only; you'll only be able to use commit linking with a single GitHub org
+
+Enable Autolink
+If you want to automatically resolve your Linear issue IDs (e.g. ENG-123) in PR descriptions or comment to links, you can enable this using GitHub's Autolink references feature
+
+Use the following URL format:
+
+<https://linear.app/workspace/issue/ID-
+
+where workspace corresponds to your workspace's URL and ID is the issue identifier key for your team. You need to add each team separately as they all have a different ID pattern.
+
+If you change your Linear team name/ID, you may need to reconfigure the Autolink settings.
+
+Basics
+Link PRs
+Once you connect Linear with GitHub, you can start linking your GitHub pull requests to Linear issues.
+
+You can link PRs to issues three ways: -by including the issue ID in the branch name -adding the issue ID in the PR title -prefacing an issue ID with a magic word in the PR description (e.g. Fixes ENG-123)
+
+PR automation
+Set up pull request automation so that updates to PRs change the status of linked Linear issues. This saves you the hassle of updating Linear issues manually.
+
+Customize the PR automation in team settings under Workflow. By default, we'll move linked issues to In Progress when PRs are open and Done when PRs are merged. You can configure status updates when PRs are drafted and request review. Since this is a team setting, it must be configured for each team in your workspace.
+
+PR review state
+When individual reviewers comment, request changes, or approve your PR, we'll display their avatars and their action on the GitHub attachment visible on the linked Linear issue. You can use this feature to quickly parse the review state of your PR without needing to return to GitHub.
+
+If you request a team review instead of a review from specific individuals, we display "review requested" or "in review" on the GitHub attachment in place of user avatars
+
+Issue linkbacks
+When an issue is linked with a pull request, Linear posts a linkback message as a comment with the issue title and description. All the pull requests are also listed in the issue details in Linear. When your pull request is being reviewed in GitHub, see the avatars of up to three most recent reviewers and their review states without leaving Linear.
+
+This cross-referencing makes it faster to retain context without jumping between apps. You can disable linkbacks in private or public repositories in the integration settings.
+
+Link multiple PRs
+You can link multiple Linear issues to a single PR by using magic words. You can link multiple PRs to a single Linear issue using any linking technique. We won't close the Linear issue until all PRs have been closed.
+
+Auto-assign and update status
+Save yourself a few steps by toggling on our automations that auto-assign the issue to you and move it to a started status when you copy the git branch name. The issue moves to the first started status in your team's workflow. To set up this automation for your account, please go to account preferences.
+
+Immediate notifications
+Our Git integrations speed up communication between developers and the rest of your team. Anyone subscribed to an issue will get a notification that it's been completed immediately upon PR merge (this includes creators of the issue, who are subscribed by default).
+
+If you set up the Slack integration for team or project notifications, it'll send an update to the selected channel. If you've connected one of our customer support integrations, conversations with affected users will be re-opened automatically upon PR merge so that you can let them know a feature shipped or bug was fixed.
+
+Change Log 1.3
+Final
